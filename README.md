@@ -17,7 +17,7 @@ $conf = [
 $db = new Db($conf);
 
 $row = $db->fetchOne("select * from posts limit 1");
-dump($db->getSql('posts', $row));
-dump($db->getSql('posts', $row, [], 'pgsql'));
-dump($row);
+vd($db->getSql('posts', $row));
+vd($db->getSql('posts', $row, [], 'pgsql'));
+vd($row);
 ```
