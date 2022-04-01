@@ -1,8 +1,8 @@
 <?php
 
 //调试打印php变量
-if(!function_exists('dump')){
-	function dump() {
+if(!function_exists('vd')){
+	function vd() {
 		static $i = 1;
 		if(func_num_args()>0){
 			foreach(func_get_args() as $arg){
