@@ -1,0 +1,23 @@
+{
+  "name": "az26/db",
+  "description": "database class",
+  "type": "library",
+  "authors": [
+    {
+      "name": "lukeme",
+      "email": "luke-me@qq.com"
+    }
+  ],
+  "require": {
+    "php": ">=7.0.0",
+    "ext-pdo": "*"
+  },
+  "autoload": {
+    "psr-4": {
+      "Az26\\Util\\": "src/"
+    },
+    "files": [
+      "src/functions.php"
+    ]
+  }
+}
