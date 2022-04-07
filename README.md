@@ -35,10 +35,10 @@ $db->table('users')->insert($rows);
 ## batch update
 ```injectablephp
 $rows = [
-    ['name' => 'dd', 'sex' => 'f', 'age' => 12], 
-    ['name' => 'aa', 'sex' => 'm', 'age' => 12]
+    ['name' => 'dd', 'sex' => 'f', 'id' => 1], 
+    ['name' => 'aa', 'sex' => 'm', 'id' => 2]
 ];
-$db->table('users')->insert($rows);
+$db->table('users')->update($rows, 'id');
 ```
 
 ## pluck
