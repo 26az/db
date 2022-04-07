@@ -8,11 +8,11 @@ if(!function_exists('vd')){
 			foreach(func_get_args() as $arg){
 				$out[] = var_export($arg, true);
 			}
-			$tpl = str_repeat("\n%s",func_num_args());
+			$tpl = str_repeat("%s",func_num_args());
 			if(PHP_SAPI == 'cli'){
-				echo vsprintf("#%s$tpl", array_merge([$i++], $out));
+				echo vsprintf("%s# $tpl\n", array_merge([$i++], $out));
 			}else{
-				echo vsprintf("<pre><b>#%s</b>$tpl</pre>", array_merge([$i++], $out));
+				echo vsprintf("<pre><b>%s#</b>$tpl</pre>", array_merge([$i++], $out));
 			}
 		}else{
 			die('call function dump without any params');
