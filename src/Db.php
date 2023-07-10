@@ -63,7 +63,7 @@ class Db
         foreach ($rows as $row) {
             $data[$row[$key]] = $row[$value];
         }
-        return $data;
+        return $data??[];
     }
 
     public function debug()
